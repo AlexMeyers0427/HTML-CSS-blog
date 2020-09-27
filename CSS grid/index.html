@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<head>
+	<title>Basic Layout with CSS Grid</title>
+	<meta name="viewport" content="width=device-width",intial-scale="1.0">
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+	<style>
+		body{
+			margin:0;
+		}
+		.container{
+			width: 100vw;
+			height: 100vh;
+
+			font-family: "quicksand", sans-serif;
+			font-weight: bold;
+			font-size: 20px;
+
+			display: grid;
+
+			grid-template-columns:1fr 1fr 1fr;
+			grid-template-rows: 50px 1fr 1fr 100px;
+
+			grid-row-gap: 10px;
+			grid-column-gap: 10px;
+
+			padding: 10px;
+			box-sizing: border-box;
+
+		}	
+
+		.container div{
+			padding: 10px;
+			border:1px solid #111;
+
+		}
+		.header{
+			grid-column-start: 1;
+			grid-column-end: 4;
+
+			text-align: center;
+			background-color: #eee;
+
+
+		}
+		.content-large{
+			grid-row-start: 2;
+			grid-row-end: span 2;
+			font-size: 20px
+		}
+		.footer{
+			grid-column: 1/span 3;
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">Header</p></div>
+		<div class="content-large">content1</div>
+		<div class="content-large">content2</div>
+		<div class="content-small">content3</div>
+		<div class="content-small">content4</div>
+		<div class="footer">footer</div>
+	</div>
+	
+</body>
